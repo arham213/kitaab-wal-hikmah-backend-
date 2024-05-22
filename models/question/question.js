@@ -1,7 +1,18 @@
 const mongoose=require('mongoose');
-const schema=mongoose.schema();
 
-const questionSchema=new schema({
+const questionSchema=new mongoose.Schema({
+    fname:{
+        type:String,
+        required:true
+    },
+    lname:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true
+    },
     question:{
         type:String,
         required:true
@@ -10,9 +21,9 @@ const questionSchema=new schema({
         type:String,
         required:true
     },
-    data:{
-        type:Date,
-        require:true
+    date:{
+        type:String,
+        default:new Date()
     }
 })
 
