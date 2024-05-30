@@ -24,6 +24,10 @@ const questionSchema=new mongoose.Schema({
     date:{
         type:String,
         default:new Date()
+    },
+    answered:{
+        type:Boolean,
+        default:false
     }
 })
 
