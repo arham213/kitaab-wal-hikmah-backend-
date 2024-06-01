@@ -3,7 +3,7 @@ module.exports={
     getQuestions: async(req,res)=>{
         console.log('Get ALL Questions API has been hit');
         try{
-            const questions= await questionModel.find({});
+            const questions= await questionModel.find({answered:true});
             return res.status(200).json(questions);
         } catch(error){
             return res.status(400).json({message:"Error Loading Questions"});
